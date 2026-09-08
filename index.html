@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Penalaran Kondisi Kesehatan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wadah-utama">
+    <header class="kepala-halaman">
+      <h1>Analisis & Penalaran Kondisi Fisik Tubuh</h1>
+      <p>Pemeriksaan fakta indikator vital dan gejala tubuh berbasis aturan klinis terstruktur.</p>
+    </header>
+
+    <main class="isi-konten">
+      <section class="kartu bagian-formulir">
+        <h2>Input Fakta Indikator Tubuh</h2>
+        <form id="formulirKesehatan">
+          <div class="tata-letak-input">
+            <div class="grup-input">
+              <label for="tensiDuduk">Tensi Sistolik Saat Duduk (mmHg)</label>
+              <input type="number" id="tensiDuduk" min="40" max="300" required placeholder="Contoh: 120">
+            </div>
+
+            <div class="grup-input">
+              <label for="tensiBerdiri">Tensi Sistolik Saat Berdiri (mmHg)</label>
+              <input type="number" id="tensiBerdiri" min="40" max="300" required placeholder="Contoh: 110">
+            </div>
+
+            <div class="grup-input">
+              <label for="nadiDuduk">Detak Nadi Saat Duduk (bpm)</label>
+              <input type="number" id="nadiDuduk" min="30" max="250" required placeholder="Contoh: 72">
+            </div>
+
+            <div class="grup-input">
+              <label for="nadiBerdiri">Detak Nadi Saat Berdiri (bpm)</label>
+              <input type="number" id="nadiBerdiri" min="30" max="250" required placeholder="Contoh: 85">
+            </div>
+
+            <div class="grup-input lebar-penuh">
+              <label for="gulaPuasa">Kadar Gula Darah Puasa (mg/dL)</label>
+              <input type="number" id="gulaPuasa" min="20" max="600" placeholder="Opsional (Contoh: 95)">
+            </div>
+          </div>
+
+          <fieldset class="bingkai-gejala">
+            <legend>Gejala Teramati (Fakta Fisik)</legend>
+            <div class="tata-letak-pilihan">
+              <label class="opsi-centang">
+                <input type="checkbox" name="gejala" value="pusing_berdiri">
+                Pusing berputar mendadak saat berdiri tegak
+              </label>
+              <label class="opsi-centang">
+                <input type="checkbox" name="gejala" value="pandangan_kabur">
+                Pandangan kabur / berkunang-kunang sesaat
+              </label>
+              <label class="opsi-centang bahaya-kritis">
+                <input type="checkbox" name="gejala" value="nyeri_dada">
+                Nyeri dada tertekan / berat
+              </label>
+              <label class="opsi-centang bahaya-kritis">
+                <input type="checkbox" name="gejala" value="sesak_napas">
+                Sesak napas akut saat istirahat
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" id="tombolProses" class="tombol-utama">Jalankan Analisis & Simpan</button>
+        </form>
+      </section>
+
+      <section class="kartu bagian-hasil" id="kartuHasil" style="display: none;">
+        <h2>Kesimpulan & Hasil Penalaran</h2>
+        <div id="lencanaPrioritas" class="lencana">NORMAL</div>
+
+        <div class="blok-hasil">
+          <h3>Evaluasi Regulasi Tekanan & Nadi (Vaskular)</h3>
+          <p id="hasilVaskular">-</p>
+        </div>
+
+        <div class="blok-hasil">
+          <h3>Evaluasi Profil Metabolik (Gula Darah)</h3>
+          <p id="hasilMetabolik">-</p>
+        </div>
+
+        <div class="blok-hasil">
+          <h3>Rekomendasi Tindakan Logis</h3>
+          <ul id="daftarRekomendasi" class="daftar-rekomendasi"></ul>
+        </div>
+
+        <div class="kaki-status">
+          <small id="statusPenyimpanan">Status Basis Data: Siap</small>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
