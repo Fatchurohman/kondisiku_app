@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.5;
+  padding: 24px 16px;
+}
+
+.wadah-utama {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.kepala-halaman {
+  margin-bottom: 24px;
+}
+
+.kepala-halaman h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.kepala-halaman p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.isi-konten {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .isi-konten {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+.kartu {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.kartu h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.tata-letak-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grup-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.grup-input.lebar-penuh {
+  grid-column: span 2;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+  border-color: #0284c7;
+}
+
+.bingkai-gejala {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 18px;
+}
+
+.bingkai-gejala legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  padding: 0 6px;
+}
+
+.tata-letak-pilihan {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.opsi-centang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.opsi-centang input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.bahaya-kritis {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.tombol-utama {
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tombol-utama:hover {
+  background-color: #0369a1;
+}
+
+.tombol-utama:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Penanda Status Hasil */
+.lencana {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+.lencana-normal {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.lencana-waspada {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.lencana-mendesak {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.lencana-darurat {
+  background-color: #7f1d1d;
+  color: #ffffff;
+}
+
+.blok-hasil {
+  margin-bottom: 16px;
+}
+
+.blok-hasil h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.blok-hasil p {
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.daftar-rekomendasi {
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.daftar-rekomendasi li {
+  margin-bottom: 6px;
+}
+
+.kaki-status {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.8rem;
+  color: #64748b;
+}
